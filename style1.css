@@ -1,0 +1,122 @@
+/* General page styling */
+body {
+    background: #101010;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Chatbot Container - Making it larger */
+.chat-container {
+    width: 600px;  /* Increased width */
+    height: 600px; /* Increased height */
+    background-color: #202020;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.3);  /* Bigger shadow for a stronger impact */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.chat-box {
+    flex: 1; /* Allows chat box to grow */
+    padding: 20px;
+    overflow-y: auto;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 0, 255, 0.2));
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;  /* Larger text for better readability */
+    max-height: 400px;
+}
+
+.message {
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 12px;
+    font-size: 16px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.bot-message {
+    background-color: #444;
+    color: #fff;
+    text-align: left;
+}
+
+.user-message {
+    background-color: #0f6eff;
+    color: #fff;
+    align-self: flex-end;
+    text-align: right;
+}
+
+#user-input {
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    margin: 10px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#send-btn {
+    background-color: #00ff9d;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;  /* Larger button */
+    transition: all 0.2s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#send-btn:hover {
+    background-color: #00ff66;
+}
+
+/* Neon glow effect for messages */
+.message {
+    position: relative;
+    animation: glowing 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 1);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.6);
+    }
+}
+
+/* Glow effect for the input field */
+#user-input:focus {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
+}
+
+#send-btn {
+    transition: transform 0.3s ease;
+}
+
+#send-btn:hover {
+    transform: scale(1.05); /* Subtle animation for the button */
+}
